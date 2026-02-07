@@ -23,8 +23,8 @@ const projects = [
     tech: ['React', 'Tailwind CSS', 'Vercel', 'Responsive Design'],
     icon: Gamepad2,
     links: {
-      demo: 'https://vercel.com/kierons-projects-b6793fc3/gamezone',
-      live: 'https://gamezone-kierons-projects-b6793fc3.vercel.app',
+      demo: 'https://gamezone-drab-ten.vercel.app/',
+      live: 'https://gamezone-drab-ten.vercel.app/',
     },
   },
   {
