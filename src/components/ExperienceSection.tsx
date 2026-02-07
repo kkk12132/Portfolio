@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Rocket, Shield, Cpu, CreditCard } from 'lucide-react';
+import { Rocket, Shield, Cpu, CreditCard, Factory, Zap } from 'lucide-react';
 
 const highlights = [
   {
@@ -74,20 +74,143 @@ const ExperienceSection = () => {
             ))}
           </div>
 
-          {/* Timeline */}
+          {/* Professional Experience Timeline */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-16"
           >
+            <h3 className="text-xl font-display font-semibold text-foreground mb-8">Professional Experience</h3>
+            <div className="space-y-8">
+              {/* C-Tech Engineers */}
+              <div className="relative pl-8 border-l-2 border-primary">
+                <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 rounded-full bg-primary glow-primary animate-pulse" />
+                <div className="pb-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-primary font-mono text-sm">Jun 2025 - Jan 2026</span>
+                    <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">Current</span>
+                  </div>
+                  <h4 className="text-lg font-display font-semibold text-foreground mt-1">
+                    IoT Web Developer Intern
+                  </h4>
+                  <p className="text-muted-foreground font-medium">
+                    C-Tech Engineers Pvt. Ltd.
+                  </p>
+                  <p className="text-muted-foreground text-sm">
+                    Pune, Maharashtra (Hybrid)
+                  </p>
+                  
+                  <ul className="mt-4 space-y-2 text-muted-foreground text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Built a real-time CNC machine monitoring system using Node.js and Arduino, processing data from <strong className="text-foreground">100+ machines</strong></span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Implemented machine state classification (Manufacturing, Idle, OFF) with shift-wise efficiency analytics</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Reduced manual machine runtime logging by <strong className="text-foreground">60%</strong> through automated dashboards and reports</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Improved data accuracy by <strong className="text-foreground">40%</strong> using debounce and validation logic for hardware inputs</span>
+                    </li>
+                  </ul>
+
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Node.js
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Arduino
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      IoT
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Real-time Systems
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Data Analytics
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Plasmid */}
+              <div className="relative pl-8 border-l-2 border-border">
+                <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 rounded-full bg-primary/60" />
+                <div className="pb-4">
+                  <span className="text-primary font-mono text-sm">Feb 2025 - Apr 2025</span>
+                  <h4 className="text-lg font-display font-semibold text-foreground mt-1">
+                    Embedded System Intern
+                  </h4>
+                  <p className="text-muted-foreground font-medium">
+                    Plasmid
+                  </p>
+                  <p className="text-muted-foreground text-sm">
+                    Pune, Maharashtra (Remote)
+                  </p>
+                  
+                  <ul className="mt-4 space-y-2 text-muted-foreground text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Worked on real-world embedded systems projects used in industry applications</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Wrote and tested Embedded C/C++ code for microcontroller-based systems</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Interfaced sensors, modules, and peripherals with hardware components</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Debugged hardware and firmware issues and improved system stability</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Learned industry practices for testing, validation, and deployment</span>
+                    </li>
+                  </ul>
+
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Embedded C/C++
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Microcontrollers
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Hardware Integration
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-secondary text-muted-foreground font-mono">
+                      Firmware
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Education Timeline */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-16"
+          >
             <h3 className="text-xl font-display font-semibold text-foreground mb-8">Education</h3>
             <div className="relative pl-8 border-l-2 border-border">
-              <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 rounded-full bg-primary glow-primary" />
+              <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 rounded-full bg-primary/60" />
               <div className="pb-8">
                 <span className="text-primary font-mono text-sm">2022 - 2026 (Expected)</span>
                 <h4 className="text-lg font-display font-semibold text-foreground mt-1">
-                  B.Tech in Computer Engineering
+                  B.Tech in Electronics and Telecommunication
                 </h4>
                 <p className="text-muted-foreground">
                   Pune Institute of Computer Technology (PICT)
