@@ -104,7 +104,7 @@ const AboutSection = () => {
                   <h3 className="font-display font-semibold text-foreground">Location</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Based in <span className="text-foreground">Pune, Maharashtra</span><br />
+                  Currently Live in <span className="text-foreground">Pune, Maharashtra</span><br />
                 </p>
               </motion.div>
 
