@@ -19,11 +19,10 @@ const projects = [
   {
     title: 'GameZone Gaming Website',
     featured: false,
-    description: 'A modern, responsive gaming website showcasing game collection. Built with modern web technologies and deployed on Vercel for optimal performance.',
-    tech: ['React', 'Tailwind CSS', 'Vercel', 'Responsive Design'],
+    description: 'A modern, responsive gaming website showcasing game collections with 7+ playable games. Built with React Router for seamless navigation and deployed on Vercel for optimal performance.',
+    tech: ['React', 'React Router', 'Tailwind CSS', 'Vercel'],
     icon: Gamepad2,
     links: {
-      demo: 'https://gamezone-drab-ten.vercel.app/',
       live: 'https://gamezone-drab-ten.vercel.app/',
     },
   },
