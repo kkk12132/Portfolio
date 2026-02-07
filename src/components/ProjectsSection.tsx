@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github, Star, Smartphone, Lock, Image, Fingerprint } from 'lucide-react';
+import { ExternalLink, Github, Star, Smartphone, Lock, Image, Fingerprint, Gamepad2 } from 'lucide-react';
 
 const projects = [
   {
@@ -14,6 +14,17 @@ const projects = [
     links: {
       playStore: 'https://play.google.com/store/apps/details?id=com.caliai.caliai',
       github: 'https://github.com/KK2574',
+    },
+  },
+  {
+    title: 'GameZone Gaming Website',
+    featured: false,
+    description: 'A modern, responsive gaming website showcasing game collection. Built with modern web technologies and deployed on Vercel for optimal performance.',
+    tech: ['React', 'Tailwind CSS', 'Vercel', 'Responsive Design'],
+    icon: Gamepad2,
+    links: {
+      demo: 'https://vercel.com/kierons-projects-b6793fc3/gamezone',
+      live: 'https://gamezone-kierons-projects-b6793fc3.vercel.app',
     },
   },
   {
@@ -31,7 +42,7 @@ const projects = [
     tech: ['React', 'Node.js', 'Express', 'Hugging Face API', 'MongoDB'],
     icon: Image,
     links: {
-      demo: '#',
+      demo: 'https://textfrontend-sigma.vercel.app/',
     },
   },
   {
@@ -160,9 +171,9 @@ const ProjectsSection = () => {
                         <project.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div className="flex gap-3">
-                        {project.links.demo && (
+                        {(project.links.demo || project.links.live) && (
                           <a
-                            href={"https://textfrontend-sigma.vercel.app/"}
+                            href={project.links.live || project.links.demo}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-primary transition-colors"
